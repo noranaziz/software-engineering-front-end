@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #4a5651;
+  color: #ffcad4;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffcad4;
+  color: #4a4e69;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.navbar .menu a {
+  color: #4a4e69;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar .menu a:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+.main-content {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.main-content h1{
+  margin-bottom: 20px;
+  color: #ffb3c1;
+}
+
+.main-content h2{
+  color: #ffb3c1;
+}
+
+.package-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  color: #4a4e69;
+}
+
+.package-card:hover {
+  transform: scale(1.02);
+}
+
+.package-card h2 {
+  color: #4a4e69;
+}
+
+button {
+  background-color: #ffb3c1;
+  color: #4a4e69;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff9aa2;
+}
+
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pagination a {
+  margin: 0 10px;
+  color: #ffb3c1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pagination a:hover {
+  text-decoration: underline;
+}
+
+input[type="text"], input[type="file"] {
+  padding: 10px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus, input[type="file"]:focus {
+  border-color: #ffb3c1;
+  outline: none;
+}
+
+.main-content .package-card {
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-content .package-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}

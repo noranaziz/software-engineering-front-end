@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom NPM Registry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">NPM Registry</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload/Update Package</a>
+      <a href="search.html">Search Packages</a>
+      <a href="#">Documentation</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main-content">
+      <h1>Available Packages</h1>
+      <div class="package-card">
+        <h2>Package 1</h2>
+        <p>Latest Version: 1.2.3</p>
+        <p>Available Versions: 1.0.0-1.2.3</p>
+        <p>(list or dropdown showing previous versions to allow user to download them)</p>
+        <p>Size: 200KB (transitive: 1.5MB)</p>
+        <p>Rating: (retrieve from phase 1)</p>
+        <p>Description: (pull from README of package?)</p><br>
+        <button class="download-btn">Download</button>
+      </div>
+      <div class="package-card">
+        <h2>Package 2</h2>
+        <p>Latest Version: 2.5.1</p>
+        <p>Available Versions: 1.0.0-2.5.1</p>
+        <p>(list or dropdown showing previous versions to allow user to download them)</p>
+        <p>Size: 100KB (transitive: 1.7MB)</p>
+        <p>Rating: (retrieve from phase 1)</p>
+        <p>Description: (pull from README of package?)</p><br>
+        <button class="download-btn">Download</button>
+      </div>
+      <!-- Add more module cards as needed -->
+    </div>
+  </div>
+
+  <div class="pagination">
+    <a href="#">&laquo; Previous</a>
+    <a href="#">Next &raquo;</a>
+  </div>
+</body>
+</html>

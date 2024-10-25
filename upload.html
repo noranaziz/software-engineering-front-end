@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload/Update Package</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">NPM Registry</div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="upload.html">Upload/Update Package</a>
+      <a href="search.html">Search Packages</a>
+      <a href="#">Documentation</a>
+    </div>
+  </div>
+
+  <div class="container">
+     <div class="main-content">
+      <h2>Upload New Package</h2>
+      <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <input type="file" id="file" name="file" accept=".zip" required>
+        </div>
+
+        <div class="form-group">
+            <label for="debloatUpdate">Enable Debloat Option:</label>
+            <input type="checkbox" id="debloatUpdate" name="debloatUpdate">
+        </div><br>
+
+        <button type="submit" class="upload-btn">Upload</button>
+      </form><br>
+     </div>
+
+     <div class="main-content">
+        <h2>Update an Existing Package</h2>
+        <form id="updateForm" action="/update" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="existingPackageName">Select Package to Update:</label><br>
+                <input type="text" id="existingPackageName" name="existingPackageName" placeholder="Enter package name" required>
+                <input type="text" id="newPackageVersion" name="newPackageVersion" placeholder="Enter package version" required>
+            </div><br>
+    
+            <label for="updateFile">Upload New Version (ZIP):</label><br>
+            <input type="file" id="updateFile" name="updateFile" required><br>
+            
+            <label for="debloatUpdate">Enable Debloat Option:</label>
+            <input type="checkbox" id="debloatUpdate" name="debloatUpdate"><br><br>
+            
+            <button type="submit" class="update-btn">Update</button>
+        </form>
+     </div>
+    </div>
+    
+
+  <script>
+    // Handle form submission for demo purpose
+    document.getElementById('uploadForm').addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent form submission
+
+      const debloat = document.getElementById('debloatUpdate').checked;
+      const file = document.getElementById('file').files[0];
+
+      if (file) {
+        alert(`Package uploaded successfully!\nDebloat: ${debloat}`);
+      } else {
+        alert('Please select a zip file to upload.');
+      }
+    });
+  </script>
+</body>
+</html>
